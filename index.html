@@ -1,23 +1,78 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Tic-Tac-Toe AI</title>
+        <title>Connect Four AI</title>
         <link rel = 'stylesheet' type = 'text/css' href = 'styles/ui.css'>
     </head>
 
-    <body>
+    <body onload="startFunc()">
         <div class = 'main-container'>
             <div class = 'board'>
                 <!-- data-indx following cell divs represents cell index in 1D array representation -->
-                <div class='cell' data-indx = "0" ></div>
-                <div class='cell' data-indx = "1" ></div>
-                <div class='cell' data-indx = "2" ></div>
-                <div class='cell' data-indx = "3" ></div>
-                <div class='cell' data-indx = "4" ></div>
-                <div class='cell' data-indx = "5" ></div>
-                <div class='cell' data-indx = "6" ></div>
-                <div class='cell' data-indx = "7" ></div>
-                <div class='cell' data-indx = "8" ></div>
+                <div class='cell' data-indx = "11" id = "11"></div>
+                <div class='cell' data-indx = "12" id = "12"></div>
+                <div class='cell' data-indx = "13" id = "13"></div>
+                <div class='cell' data-indx = "14" id = "14"></div>
+                <div class='cell' data-indx = "15" id = "15"></div>
+                <div class='cell' data-indx = "16" id = "16"></div>
+                <div class='cell' data-indx = "17" id = "17"></div>
+                <div class='cell' data-indx = "18" id = "18"></div>
+                <div class='cell' data-indx = "21" id = "21"></div>
+                <div class='cell' data-indx = "22" id = "22"></div>
+                <div class='cell' data-indx = "23" id = "23"></div>
+                <div class='cell' data-indx = "24" id = "24"></div>
+                <div class='cell' data-indx = "25" id = "25"></div>
+                <div class='cell' data-indx = "26" id = "26"></div>
+                <div class='cell' data-indx = "27" id = "27"></div>
+                <div class='cell' data-indx = "28" id = "28"></div>
+                <div class='cell' data-indx = "31" id = "31"></div>
+                <div class='cell' data-indx = "32" id = "32"></div>
+                <div class='cell' data-indx = "33" id = "33"></div>
+                <div class='cell' data-indx = "34" id = "34"></div>
+                <div class='cell' data-indx = "35" id = "35"></div>
+                <div class='cell' data-indx = "36" id = "36"></div>
+                <div class='cell' data-indx = "37" id = "37"></div>
+                <div class='cell' data-indx = "38" id = "38"></div>
+                <div class='cell' data-indx = "41" id = "41"></div>
+                <div class='cell' data-indx = "42" id = "42"></div>
+                <div class='cell' data-indx = "43" id = "43"></div>
+                <div class='cell' data-indx = "44" id = "44"></div>
+                <div class='cell' data-indx = "45" id = "45"></div>
+                <div class='cell' data-indx = "46" id = "46"></div>
+                <div class='cell' data-indx = "47" id = "47"></div>
+                <div class='cell' data-indx = "48" id = "48"></div>
+                <div class='cell' data-indx = "51" id = "51"></div>
+                <div class='cell' data-indx = "52" id = "52"></div>
+                <div class='cell' data-indx = "53" id = "53"></div>
+                <div class='cell' data-indx = "54" id = "54"></div>
+                <div class='cell' data-indx = "55" id = "55"></div>
+                <div class='cell' data-indx = "56" id = "56"></div>
+                <div class='cell' data-indx = "57" id = "57"></div>
+                <div class='cell' data-indx = "58" id = "58"></div>
+                <div class='cell' data-indx = "61" id = "61"></div>
+                <div class='cell' data-indx = "62" id = "62"></div>
+                <div class='cell' data-indx = "63" id = "63"></div>
+                <div class='cell' data-indx = "64" id = "64"></div>
+                <div class='cell' data-indx = "65" id = "65"></div>
+                <div class='cell' data-indx = "66" id = "66"></div>
+                <div class='cell' data-indx = "67" id = "67"></div>
+                <div class='cell' data-indx = "68" id = "68"></div>
+                <div class='cell' data-indx = "71" id = "71"></div>
+                <div class='cell' data-indx = "72" id = "72"></div>
+                <div class='cell' data-indx = "73" id = "73"></div>
+                <div class='cell' data-indx = "74" id = "74"></div>
+                <div class='cell' data-indx = "75" id = "75"></div>
+                <div class='cell' data-indx = "76" id = "76"></div>
+                <div class='cell' data-indx = "77" id = "77"></div>
+                <div class='cell' data-indx = "78" id = "78"></div>
+                <div class='cell' data-indx = "81" id = "71"></div>
+                <div class='cell' data-indx = "82" id = "72"></div>
+                <div class='cell' data-indx = "83" id = "73"></div>
+                <div class='cell' data-indx = "84" id = "74"></div>
+                <div class='cell' data-indx = "85" id = "75"></div>
+                <div class='cell' data-indx = "86" id = "76"></div>
+                <div class='cell' data-indx = "87" id = "77"></div>
+                <div class='cell' data-indx = "88" id = "78"></div>
             </div>
 
             <div class = 'control'>
@@ -25,7 +80,7 @@
                 <div class = 'intial'>
                     <div class = 'difficulty'>
                         <span class = 'level not-selected' id = "blind">Blind</span>
-                        <span class = 'level not-selected' id = "novice">Intermediate</span>
+                        <span class = 'level not-selected' id = "novice">Medium</span>
                         <span class = 'level not-selected' id = "master">Master</span>
                     </div>
 
@@ -36,7 +91,7 @@
                 <div class = 'ingame' id="human">It's your turn ...</div>
                 <div class = 'ingame' id="ai">
                     <img src = "imgs/robot.png" id = "robot" class = "robot" />
-                    <p>Waint for it ...</p>
+                    <p>Wait for it ...</p>
                 </div>
                 <div class = 'ingame' id="won">You won !</div>
                 <div class = 'ingame' id="lost">You lost !</div>
@@ -49,5 +104,6 @@
         <script src = "scripts/game.js"></script>
         <script src = "scripts/ai.js"></script>
         <script src = "scripts/control.js"></script>
+        <script src = "scripts/CF.js"></script>
     </body>
 </html>
